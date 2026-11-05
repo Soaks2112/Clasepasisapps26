@@ -1,7 +1,7 @@
 # Deber 5 — Preparación para subir
 
-**Estado: código y comprobaciones listos; falta una captura obligatoria.**
-No se ha hecho push ni abierto un pull request.
+**Estado: código y comprobaciones listos; captura del agente recibida con limitación.**
+Se prepara la publicación de la rama `deber5` mediante pull request hacia `main`.
 
 La copia de entrega está en:
 
@@ -26,13 +26,14 @@ sin ancestro común con el `main` remoto. Los trabajos anteriores se conservaron
 - [x] Investigación en chat nuevo mediante herramientas MCP reales.
 - [x] Respuestas e instrucciones de instalación y conexión redactadas.
 - [x] Cuatro de las cinco capturas obligatorias disponibles.
-- [ ] Capturar las llamadas del chat nuevo en `evidencias/agente_tools.png`.
+- [x] Incorporar la captura proporcionada en `evidencias/agente_tools.png`.
+- [ ] Complementarla con las llamadas expandidas: la captura recibida muestra solo el resumen final.
 - [ ] Leer el código y ajustar `respuestas.md` a tus propias palabras.
 - [ ] Subir `deber5` y abrir el pull request hacia `main`.
 
 ## Completar y subir
 
-1. Guardar la captura pendiente en la copia de entrega. Las instrucciones están
+1. Complementar la captura recibida con las llamadas expandidas en la copia de entrega. Las instrucciones están
    en `evidencias/README.md`.
 2. Revisar `respuestas.md` y el código.
 3. Ejecutar desde la **copia de entrega**:

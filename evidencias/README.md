@@ -9,7 +9,7 @@ Las trazas exportadas usan UTC (por eso sus marcas corresponden al día 5).
 | `inspector_tools.png` | Las tres herramientas descubiertas en MCP Inspector | Listo |
 | `inspector_pruebas.png` | Composición de las capturas reales D1–D7 | Listo |
 | `pytest.png` | Salida real de pytest: 16 pruebas pasan | Listo |
-| `agente_tools.png` | Interfaz del agente con llamadas, argumentos y resultados | **Pendiente de captura manual** |
+| `agente_tools.png` | Interfaz del agente con llamadas, argumentos y resultados | Captura recibida; muestra solo el resumen |
 
 ## Origen de las pruebas
 
@@ -43,9 +43,9 @@ Las trazas exportadas usan UTC (por eso sus marcas corresponden al día 5).
 | D7 | Motivo de tres espacios rechazado |
 | Reinicio | Misma alerta aceptada en el proceso nuevo |
 
-## Captura pendiente
+## Límite de la captura recibida
 
-Abrir el chat **Deber 5 — investigación mediante MCP** creado en Codex
+Se agregó `agente_tools.png`, enviada por el usuario. Muestra el resumen final y el error de INC-999; no muestra las llamadas expandidas con sus argumentos y resultados. Por tanto, todavía no satisface íntegramente la evidencia visual exigida. Para completarla, abrir el chat **Deber 5 — investigación mediante MCP** creado en Codex
 (identificador `01a1a966-b61e-7201-b5a4-6215485e77c5`). Expandir las llamadas de
 las herramientas para mostrar sus nombres, argumentos y resultados. Guardar
 la captura como `evidencias/agente_tools.png` en la copia de entrega.
