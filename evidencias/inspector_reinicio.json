@@ -1,0 +1,319 @@
+[
+  {
+    "id": "024dbc3d-d01a-4636-9d14-7fc49bc24ec1",
+    "timestamp": "2026-11-05T01:59:00.634Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "initialize",
+      "params": {
+        "protocolVersion": "2025-11-25",
+        "capabilities": {
+          "sampling": {},
+          "elicitation": {
+            "form": {},
+            "url": {}
+          },
+          "roots": {
+            "listChanged": true
+          },
+          "tasks": {
+            "list": {},
+            "cancel": {},
+            "requests": {
+              "sampling": {
+                "createMessage": {}
+              },
+              "elicitation": {
+                "create": {}
+              }
+            }
+          },
+          "extensions": {
+            "io.modelcontextprotocol/tasks": {},
+            "io.modelcontextprotocol/ui": {
+              "mimeTypes": [
+                "text/html;profile=mcp-app"
+              ],
+              "elicitation": {}
+            },
+            "io.modelcontextprotocol/skills": {}
+          }
+        },
+        "clientInfo": {
+          "name": "mcp-inspector",
+          "version": "2.14.0"
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 0
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 0,
+      "result": {
+        "capabilities": {
+          "prompts": {
+            "listChanged": false
+          },
+          "resources": {
+            "listChanged": false,
+            "subscribe": false
+          },
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "protocolVersion": "2025-11-25",
+        "serverInfo": {
+          "name": "MCP Detective",
+          "version": ""
+        }
+      }
+    },
+    "duration": 2634
+  },
+  {
+    "id": "63007afa-b29b-4806-b18e-4ebd3438cb5f",
+    "timestamp": "2026-11-05T01:59:03.282Z",
+    "direction": "notification",
+    "origin": "client",
+    "message": {
+      "jsonrpc": "2.0",
+      "method": "notifications/initialized"
+    }
+  },
+  {
+    "id": "ea1b1f3f-8b3c-4caa-b4c2-7553cd4e91f2",
+    "timestamp": "2026-11-05T01:59:03.335Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "resources/list",
+      "jsonrpc": "2.0",
+      "id": 1,
+      "params": {
+        "_meta": {
+          "progressToken": 1
+        }
+      }
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "resources": []
+      }
+    },
+    "duration": 20
+  },
+  {
+    "id": "dceb9806-c49a-458e-8e51-ecc607d83406",
+    "timestamp": "2026-11-05T01:59:03.336Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "tools/list",
+      "jsonrpc": "2.0",
+      "id": 2,
+      "params": {
+        "_meta": {
+          "progressToken": 2
+        }
+      }
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": {
+        "tools": [
+          {
+            "description": "Lista el id, sistema y cantidad de eventos de cada caso; solo lectura.",
+            "inputSchema": {
+              "properties": {},
+              "type": "object",
+              "title": "listar_casosArguments"
+            },
+            "name": "listar_casos",
+            "outputSchema": {
+              "properties": {
+                "result": {
+                  "items": {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  "title": "Result",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "result"
+              ],
+              "type": "object",
+              "title": "listar_casosOutput"
+            }
+          },
+          {
+            "description": "Consulta los eventos exactos de un caso; falla si no existe; solo lectura.",
+            "inputSchema": {
+              "properties": {
+                "caso_id": {
+                  "title": "Caso Id",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "caso_id"
+              ],
+              "type": "object",
+              "title": "consultar_eventosArguments"
+            },
+            "name": "consultar_eventos",
+            "outputSchema": {
+              "properties": {
+                "result": {
+                  "items": {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  "title": "Result",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "result"
+              ],
+              "type": "object",
+              "title": "consultar_eventosOutput"
+            }
+          },
+          {
+            "description": "Registra en memoria una alerta única: nivel bajo/medio/alto y motivo no vacío.",
+            "inputSchema": {
+              "properties": {
+                "caso_id": {
+                  "title": "Caso Id",
+                  "type": "string"
+                },
+                "nivel": {
+                  "title": "Nivel",
+                  "type": "string"
+                },
+                "motivo": {
+                  "title": "Motivo",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "caso_id",
+                "nivel",
+                "motivo"
+              ],
+              "type": "object",
+              "title": "registrar_alertaArguments"
+            },
+            "name": "registrar_alerta",
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "title": "registrar_alertaDictOutput"
+            }
+          }
+        ]
+      }
+    },
+    "duration": 32
+  },
+  {
+    "id": "d09fb83a-b4a9-46f9-9be3-9822df08bfbc",
+    "timestamp": "2026-11-05T01:59:03.336Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "prompts/list",
+      "jsonrpc": "2.0",
+      "id": 3,
+      "params": {
+        "_meta": {
+          "progressToken": 3
+        }
+      }
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {
+        "prompts": []
+      }
+    },
+    "duration": 49
+  },
+  {
+    "id": "45dafcc3-5a1f-466a-9799-b6c9484901bc",
+    "timestamp": "2026-11-05T01:59:03.337Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "resources/templates/list",
+      "jsonrpc": "2.0",
+      "id": 4,
+      "params": {
+        "_meta": {
+          "progressToken": 4
+        }
+      }
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 4,
+      "result": {
+        "resourceTemplates": []
+      }
+    },
+    "duration": 61
+  },
+  {
+    "id": "06ed1b33-7ca5-4f82-905a-24fa932378f4",
+    "timestamp": "2026-11-05T02:00:16.547Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "tools/call",
+      "params": {
+        "name": "registrar_alerta",
+        "arguments": {
+          "caso_id": "INC-003",
+          "nivel": "alto",
+          "motivo": "Cuatro fallos y un acceso exitoso desde la misma IP; requiere investigación"
+        },
+        "_meta": {
+          "progressToken": 5
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 5
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 5,
+      "result": {
+        "content": [
+          {
+            "text": "{\n  \"caso_id\": \"INC-003\",\n  \"nivel\": \"alto\",\n  \"motivo\": \"Cuatro fallos y un acceso exitoso desde la misma IP; requiere investigación\",\n  \"estado\": \"registrada\"\n}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "caso_id": "INC-003",
+          "nivel": "alto",
+          "motivo": "Cuatro fallos y un acceso exitoso desde la misma IP; requiere investigación",
+          "estado": "registrada"
+        }
+      }
+    },
+    "duration": 92
+  }
+]
